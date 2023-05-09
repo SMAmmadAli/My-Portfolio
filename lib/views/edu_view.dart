@@ -23,14 +23,14 @@ class EduView extends StatelessWidget {
               body: SingleChildScrollView(
                 child: Column(
                   children: const [
-                    const SizedBox(
+                    SizedBox(
                       height: 20,
                     ),
-                    const Headings(
+                    Headings(
                       text1: "My ",
                       text2: "Journey",
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 25,
                     ),
                     MyContainer(
@@ -39,7 +39,7 @@ class EduView extends StatelessWidget {
                       text3: """Karachi Board
 SMUI Model School Karachi""",
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 25,
                     ),
                     MyContainer(
@@ -47,7 +47,7 @@ SMUI Model School Karachi""",
                       text2: "INTERMEDIATE",
                       text3: "Nabi Bagh Z.M science College",
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 25,
                     ),
                     MyContainer(
@@ -55,7 +55,7 @@ SMUI Model School Karachi""",
                       text2: "BACHELORS OF COMPUTER SCIENCE",
                       text3: "Sindh Madressatul Islam University.",
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 25,
                     ),
                     MyContainer(
@@ -64,7 +64,7 @@ SMUI Model School Karachi""",
                       text3:
                           "1 Year Diploma of Information Technology from Vocational Training Center (VTC) 1 Year Diploma of Information Technology from Vocational Training Center (VTC)",
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 25,
                     ),
                     MyContainer(
