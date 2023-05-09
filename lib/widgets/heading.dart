@@ -21,8 +21,8 @@ class Headings extends StatelessWidget {
                 text: TextSpan(
                     text: text1,
                     style: TextStyle(
-                      fontSize: 44,
-                      letterSpacing: 1.2,
+                      fontSize: 36,
+                      letterSpacing: 1.4,
                       fontFamily: 'Trajan Pro',
                       fontWeight: FontWeight.w800,
                       color: MyColor.white,

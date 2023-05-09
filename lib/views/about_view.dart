@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/utils/image_constant.dart';
 import 'package:portfolio/utils/text_constant.dart';
 
+import '../dimension/dimension.dart';
 import '../utils/color_constant.dart';
 import '../widgets/heading.dart';
 
@@ -11,6 +12,10 @@ class AboutView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: MyColor.bgColor,
+      ),
       backgroundColor: MyColor.bgColor,
       body: SingleChildScrollView(
         child: Column(
