@@ -7,7 +7,9 @@ import '../viewmodels/button_viewmodel.dart';
 class MyButton1 extends StatelessWidget {
   final String text1;
   final Color color;
-  const MyButton1({super.key, required this.text1, required this.color});
+  final Function;
+  const MyButton1(
+      {super.key, required this.text1, required this.color, this.Function});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +17,7 @@ class MyButton1 extends StatelessWidget {
         viewModelBuilder: () => ButtonViewModel(),
         builder: ((context, viewModel, child) {
           return InkWell(
-            onTap: () {},
+            onTap: Function,
             onHover: (hovered) {
               viewModel.onHover(hovered);
             },

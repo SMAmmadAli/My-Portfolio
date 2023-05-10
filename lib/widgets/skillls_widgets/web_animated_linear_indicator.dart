@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../utils/color_constant.dart';
+import '../../utils/color_constant.dart';
 
-class AnimatedLinearIndicator extends StatelessWidget {
+class MobileAnimatedLinearIndicator extends StatelessWidget {
   final double percentage;
   final String label;
-  const AnimatedLinearIndicator(
+  const MobileAnimatedLinearIndicator(
       {super.key, required this.percentage, required this.label});
 
   @override
@@ -34,7 +34,7 @@ class AnimatedLinearIndicator extends StatelessWidget {
               ),
               LinearProgressIndicator(
                 value: value,
-                color: Colors.amber,
+                color: MyColor.blueAccent,
                 backgroundColor: MyColor.bgColor,
               ),
             ],

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../utils/color_constant.dart';
+import '../../utils/color_constant.dart';
 
-class AnimatedCircularIndicator extends StatelessWidget {
+class MobileAnimatedCircularIndicator extends StatelessWidget {
   final double percentage;
   final String label;
-  const AnimatedCircularIndicator(
+  const MobileAnimatedCircularIndicator(
       {super.key, required this.percentage, required this.label});
 
   @override
@@ -24,15 +24,15 @@ class AnimatedCircularIndicator extends StatelessWidget {
                     CircularProgressIndicator(
                       strokeWidth: 8,
                       value: value,
-                      color: Colors.yellow,
+                      color: MyColor.blueAccent,
                       backgroundColor: MyColor.bgColor,
                     ),
                     Center(
                       child: Text((value * 100).toInt().toString() + "%",
                           style: TextStyle(
-                              fontWeight: FontWeight.w700,
+                              fontWeight: FontWeight.w400,
                               fontFamily: 'Trajan Pro',
-                              fontSize: 20,
+                              fontSize: 14,
                               color: MyColor.white)),
                     )
                   ],
@@ -40,15 +40,15 @@ class AnimatedCircularIndicator extends StatelessWidget {
               }),
         ),
         const SizedBox(
-          height: 20,
+          height: 12,
         ),
         Text(label,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
             style: TextStyle(
-                fontWeight: FontWeight.w700,
+                fontWeight: FontWeight.w400,
                 fontFamily: 'Trajan Pro',
-                fontSize: 22,
+                fontSize: 15,
                 color: MyColor.white))
       ],
     );
