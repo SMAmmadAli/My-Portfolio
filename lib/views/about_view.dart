@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/utils/image_constant.dart';
 import 'package:portfolio/utils/text_constant.dart';
+import 'package:portfolio/widgets/about_widgets/mobile_image.dart';
+import 'package:portfolio/widgets/about_widgets/web_image.dart';
 
 import '../dimension/dimension.dart';
 import '../utils/color_constant.dart';
@@ -30,33 +32,14 @@ class AboutView extends StatelessWidget {
             const SizedBox(
               height: 40,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Stack(
-                  children: [
-                    CircleAvatar(
-                      radius: MediaQuery.of(context).size.width * 0.11,
-                      backgroundColor: Colors.grey.shade500,
-                    ),
-                    CircleAvatar(
-                      radius: MediaQuery.of(context).size.width * 0.105,
-                      backgroundColor: MyColor.blue,
-                      child: CircleAvatar(
-                        radius: MediaQuery.of(context).size.width * 0.1,
-                        backgroundColor: MyColor.bgColor,
-                        backgroundImage: AssetImage(MyImage.coverPic),
-                      ),
-                    ),
-                    // RotationTransition(
-                    // turns: ,
-                    // child:
-
-                    // )
-                  ],
-                )
-              ],
-            ),
+            LayoutBuilder(
+                builder: (BuildContext context, BoxConstraints constraints) {
+              if (constraints.maxWidth == 500) {
+                return MobileImage();
+              } else {
+                return WebImage();
+              }
+            }),
             const SizedBox(
               height: 30,
             ),

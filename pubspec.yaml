@@ -40,6 +40,8 @@ dependencies:
   percent_indicator: ^4.2.3
   animated_text_kit: ^4.2.2
   font_awesome_flutter: ^10.4.0
+  adaptive_navbar: ^0.0.3
+  bottom_sheet: ^3.1.2
   
 dev_dependencies:
   flutter_test:

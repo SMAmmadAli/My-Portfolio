@@ -8,6 +8,7 @@ import '../utils/text_constant.dart';
 import '../widgets/home_text.dart';
 import '../widgets/home_widgets/mobileview_middlecontent.dart';
 import '../widgets/home_widgets/mylogo.dart';
+import '../widgets/home_widgets/text_button.dart';
 import '../widgets/home_widgets/webview_middle_content.dart';
 
 class HomePage extends StatelessWidget {
@@ -38,7 +39,103 @@ class HomePage extends StatelessWidget {
                             children: [
                               MyLogo(),
                               IconButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Scaffold.of(context).showBottomSheet<void>(
+                                        (BuildContext context) {
+                                      return TweenAnimationBuilder(
+                                          tween:
+                                              Tween<double>(begin: 0, end: 2),
+                                          duration: Duration(seconds: 2),
+                                          builder:
+                                              (context, double value, child) {
+                                            return Container(
+                                              height: 200,
+                                              color: MyColor.bgColor,
+                                              child: Center(
+                                                child: Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  mainAxisSize:
+                                                      MainAxisSize.min,
+                                                  children: [
+                                                    MyTextButton(
+                                                      text: MyText.home,
+                                                      Function: () {
+                                                        Navigator.push(
+                                                            context,
+                                                            MaterialPageRoute(
+                                                                builder:
+                                                                    (context) =>
+                                                                        const HomePage()));
+                                                      },
+                                                    ),
+                                                    const SizedBox(
+                                                      height: 8,
+                                                    ),
+                                                    MyTextButton(
+                                                      text: MyText.about,
+                                                      Function: () {
+                                                        Navigator.push(
+                                                            context,
+                                                            MaterialPageRoute(
+                                                                builder:
+                                                                    (context) =>
+                                                                        const AboutView()));
+                                                      },
+                                                    ),
+                                                    const SizedBox(
+                                                      height: 8,
+                                                    ),
+                                                    MyTextButton(
+                                                      text: MyText.education,
+                                                      Function: () {
+                                                        Navigator.push(
+                                                            context,
+                                                            MaterialPageRoute(
+                                                                builder:
+                                                                    (context) =>
+                                                                        const EduView()));
+                                                      },
+                                                    ),
+                                                    const SizedBox(
+                                                      height: 8,
+                                                    ),
+                                                    MyTextButton(
+                                                      text: MyText.skill,
+                                                      Function: () {
+                                                        Navigator.push(
+                                                            context,
+                                                            MaterialPageRoute(
+                                                                builder:
+                                                                    (context) =>
+                                                                        const SkillView()));
+                                                      },
+                                                    ),
+                                                    const SizedBox(
+                                                      height: 20,
+                                                    ),
+                                                    TextButton(
+                                                        onPressed: () {
+                                                          Navigator.pop(
+                                                              context);
+                                                        },
+                                                        child: Text(
+                                                          "Close",
+                                                          style: TextStyle(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w300,
+                                                              fontSize: 12,
+                                                              color: MyColor
+                                                                  .white),
+                                                        ))
+                                                  ],
+                                                ),
+                                              ),
+                                            );
+                                          });
+                                    });
+                                  },
                                   icon: Icon(
                                     Icons.menu,
                                     color: MyColor.white,
