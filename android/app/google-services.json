@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "757836925666",
+    "project_id": "thesmammadali",
+    "storage_bucket": "thesmammadali.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757836925666:android:1b2f47828a102db6ed2cbb",
+        "android_client_info": {
+          "package_name": "com.example.portfolio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "757836925666-s656bshon1831n8bfs0g4qh9tn5m2ptk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBVqBve_-nB6THufV_VD90R_Gz5uMA_PE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "757836925666-s656bshon1831n8bfs0g4qh9tn5m2ptk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "757836925666-5nt60kngbd7pqmpm8cfsiv3m2tatra6c.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.portfolio"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
